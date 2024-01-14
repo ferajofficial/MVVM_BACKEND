@@ -65,11 +65,12 @@ const login = async (req, res) => {
         message: "Incorrect password",
       });
     }
-
+    const existingUserId = existingUser.id;
+    // console.log(existingUserId);
     console.log(`User: ${existingUser.name} logged in successfully`);
     res
       .status(200)
-      .json({ status: true, message: "User logged in Successfully" });
+      .json({ status: true, message: "User logged in Successfully",id:existingUserId });
   } catch (err) {
     console.log(err.message);
     res.status(500).json({ message: "server error." });
