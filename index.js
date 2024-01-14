@@ -1,5 +1,4 @@
-// const express = require("express");
-
+//* Initiate the server //
 const mongoose = require("mongoose");
 const router = require("./routes/user_routes");
 const app = require("./app");
@@ -20,5 +19,5 @@ mongoose
 app.get("/");
 
 app.listen(port, () => {
-  console.log("Listeing to the port 8080");
+  console.log("Listening to the port 8080");
 });
